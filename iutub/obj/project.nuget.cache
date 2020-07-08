@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+AuX/I55dQ2kS2/o5vYMIWjDW7SBbqWnO9l1e9fUCkww1w0vSKc/IwAd/QbptNCrVOKdIZQvVJsHjPIB99VEKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pa1_1\\Documents\\GitHub\\ex_videos\\iutub\\iutub.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pa1_1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
