@@ -1,0 +1,4 @@
+/home/pau/Documents/git_repos/ex_videos/iutub_tests/obj/Debug/netcoreapp3.1/iutub_tests.csprojAssemblyReference.cache
+/home/pau/Documents/git_repos/ex_videos/iutub_tests/obj/Debug/netcoreapp3.1/iutub_tests.AssemblyInfoInputs.cache
+/home/pau/Documents/git_repos/ex_videos/iutub_tests/obj/Debug/netcoreapp3.1/iutub_tests.AssemblyInfo.cs
+/home/pau/Documents/git_repos/ex_videos/iutub_tests/obj/Debug/netcoreapp3.1/iutub_tests.csproj.CoreCompileInputs.cache
