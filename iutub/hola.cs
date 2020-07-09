@@ -2,7 +2,7 @@ using System;
 
 namespace iutub
 {
-    class Hola
+    public class Hola
     {
         public string saluda {get; set;}
         public Hola(string saluda)

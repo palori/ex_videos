@@ -9,22 +9,78 @@ namespace iutub_tests
 {
     public class IutubTests
     {
+        // Simple test
         [Fact]
         public void Test1()
         {
-            Assert.True(true); // hello world test
+            Assert.True(true);
+        }
+
+        // Video tests
+        [Fact]
+        public void Test_VideoTitle()
+        {
+            string title = "titol";
+            var tags = new List<string>{"sustainable","eco-friendly"};
+            int id = 101;
+            var vid = new Video(title, tags, id);
+            title.Equals(vid.Title);
         }
 
         [Fact]
-        public void Test2()
+        public void Test_VideoTags()
         {
-            /*var title = "titol";
+            string title = "titol";
             var tags = new List<string>{"sustainable","eco-friendly"};
-            var vid = new Video(title, tags, 101);
-            //Console.WriteLine($"New video: {vid.Title}");
-            title.Equals(vid.Title);*/
-            var h = new Hola("salut!");
-            h.saluda.Equals("salut!");
+            int id = 101;
+            var vid = new Video(title, tags, id);
+            tags.Equals(vid.Tags);
+        }
+
+        [Fact]
+        public void Test_VideoId()
+        {
+            string title = "titol";
+            var tags = new List<string>{"sustainable","eco-friendly"};
+            int id = 101;
+            var vid = new Video(title, tags, id);
+            id.Equals(vid.Id);
+        }
+
+        [Fact]
+        public void Test_VideoUrl()
+        {
+            string title = "titol";
+            var tags = new List<string>{"sustainable","eco-friendly"};
+            int id = 101;
+            var vid = new Video(title, tags, id);
+
+            string url = vid.getBaseUrl() + id.ToString();
+            url.Equals(vid.Url);
+        }
+
+        // faltaria testejar: play(), pause() i stop()
+
+
+        // User tests
+        [Fact]
+        public void Test_UserUserName()
+        {
+            string username = "palori";
+            string password = "Zx09*";
+            var usr = new User(username, "name", "surname", password);
+
+            username.Equals(usr.UserName);
+        }
+
+        [Fact]
+        public void Test_UserPassword()
+        {
+            string username = "palori";
+            string password = "Zx09*";
+            var usr = new User(username, "name", "surname", password);
+
+            password.Equals(usr.Password);
         }
     }
 }

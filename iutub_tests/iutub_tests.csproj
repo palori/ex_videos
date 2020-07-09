@@ -13,7 +13,7 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <ProjectReference Include="..\iutub\iutub.csproj" />
   </ItemGroup>
   

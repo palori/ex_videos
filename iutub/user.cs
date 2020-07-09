@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace iutub
 {
-    class User
+    public class User
     {
         const int ID_NO_VIDEO_FOUND = -1; // veure on s'ha de posar...
 

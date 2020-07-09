@@ -6,10 +6,14 @@ using System.Collections.Generic;
 
 namespace iutub
 {
-    class Video
+    public class Video
     {
-        private const string BASE_URL = "iutub.com/watch?v=";
+        public const string BASE_URL = "iutub.com/watch?v=";
 
+        public string getBaseUrl()
+        {
+            return BASE_URL;
+        }
         /*private int _id;
         public int Id
         {
@@ -31,7 +35,7 @@ namespace iutub
         //public Video(string Title, string[] Tags, int Id)
         public Video(string Title, List<string> Tags, int id)
         {
-            Console.WriteLine("new video");
+            //Console.WriteLine("new video");
             this.Title = Title;
             this.Tags = Tags;
             //this.addTags(Tags);
