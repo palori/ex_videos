@@ -82,5 +82,48 @@ namespace iutub_tests
 
             password.Equals(usr.Password);
         }
+
+        [Fact]
+        public void Test_UserAddVideoAndTags_getVideo()
+        {
+            string username = "palori";
+            string password = "Zx09*";
+            var usr = new User(username, "name", "surname", password);
+
+            string title = "titol";
+            var tags = new List<string>{"sustainable","eco-friendly"};
+            int id = 101;
+            var vid = new Video(title, tags, id);
+
+            usr.addVideo(vid);
+
+            var newTags = new List<string>{"food","beach"};
+            usr.addTags(id, newTags);
+
+            var newTags_full = new List<string>{"sustainable","eco-friendly","food","beach"};
+
+            newTags_full.Equals(usr.getVideo(id).Tags);
+        }
+
+        [Fact]
+        public void Test_UserIsUser()
+        {
+            string username = "palori";
+            string password = "Zx09*";
+            var usr = new User(username, "name", "surname", password);
+
+            Assert.True(usr.isUser(usr));
+        }
+
+        [Fact]
+        public void Test_UserIsNotUser()
+        {
+            string username = "palori";
+            string password = "Zx09*";
+            var usr = new User(username, "name", "surname", password);
+            var usr2 = new User("pa1", "name", "surname", password);
+
+            Assert.False(usr.isUser(usr2));
+        }
     }
 }

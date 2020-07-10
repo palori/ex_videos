@@ -22,6 +22,30 @@ namespace iutub
             this.Surname = Surname;
             this.Password = Password;
             this.RegisterDate = DateTime.Now;
+
+            Videos = new List<Video>();
+        }
+
+        public User(string UserName, string Password) // fake...
+        {
+            this.UserName = UserName;
+            this.Name = "";
+            this.Surname = "";
+            this.Password = Password;
+            this.RegisterDate = DateTime.Now;
+
+            Videos = new List<Video>();
+        }
+
+        public User() // empty constructor
+        {
+            this.UserName = "";
+            this.Name = "";
+            this.Surname = "";
+            this.Password = "";
+            this.RegisterDate = DateTime.Now;
+
+            Videos = new List<Video>();
         }
 
         public void addVideo(Video newVideo)
@@ -74,9 +98,13 @@ namespace iutub
             return false;
         }
 
-        public bool isUser(User possibleUser)
+        public bool isUser(User possibleUser) 
         {
             // check if it is the same user
+            // ---
+            // maybe it shoud be the equals() method,
+            // and compare all the features, but for
+            // this exercise it is enough
             if (UserName == possibleUser.UserName &&
                 Password == possibleUser.Password) return true;
             return false;
