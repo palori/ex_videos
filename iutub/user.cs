@@ -12,7 +12,7 @@ namespace iutub
         public string Name {get; set;}
         public string Surname {get; set;}
         public string Password {get; set;}
-        public DateTime RegisterDate {get;}
+        public DateTime RegisterDate {get; set;}
         public List<Video> Videos {get;}
 
         public User(string UserName, string Name, string Surname, string Password)
@@ -21,7 +21,7 @@ namespace iutub
             this.Name = Name;
             this.Surname = Surname;
             this.Password = Password;
-            this.RegisterDate = DateTime.Now;
+            updateRegisterDate();
 
             Videos = new List<Video>();
         }
@@ -32,7 +32,7 @@ namespace iutub
             this.Name = "";
             this.Surname = "";
             this.Password = Password;
-            this.RegisterDate = DateTime.Now;
+            updateRegisterDate();
 
             Videos = new List<Video>();
         }
@@ -43,9 +43,14 @@ namespace iutub
             this.Name = "";
             this.Surname = "";
             this.Password = "";
-            this.RegisterDate = DateTime.Now;
+            updateRegisterDate();
 
             Videos = new List<Video>();
+        }
+
+        public void updateRegisterDate()
+        {
+            RegisterDate = DateTime.Now;
         }
 
         public void addVideo(Video newVideo)

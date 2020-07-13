@@ -58,19 +58,29 @@ namespace iutub
         public string play()
         {
             //return $"Playing... {Title}";
-            return $"Playing...";
+            return $"\tPlaying...";
         }
 
         public string pause()
         {
             //return $"Video {Title} paused...";
-            return $"Video paused...";
+            return $"\tVideo paused...";
         }
 
         public string stop()
         {
             //return $"Video {Title} stopped...";
-            return $"Video stopped...";
+            return $"\tVideo stopped...";
+        }
+
+        public override string ToString()
+        {
+            string s = $"\tTitle: {Title}\n\tURL: {Url}\n\tTags: {Tags[0]}";
+            for (int i = 1; i < Tags.Count; i++)
+            {
+                s += $", {Tags[i]}";
+            }
+            return s + "\n";
         }
     }
 }
